@@ -1,9 +1,11 @@
 #include <iostream>
 #include<vector>
 using namespace std;
-
+//this is forced method, 
+// find a method with shorter time. 
 vector<int> sortedSquares(vector<int>& nums){
      //vector<int> sorted_nums;
+
         
         for(int i=0; i<nums.size(); ++i){
             nums[i]= nums[i] * nums[i];
@@ -23,6 +25,7 @@ vector<int> sortedSquares(vector<int>& nums){
         }
         
         return nums;
+        
 }
 
 int main(){
