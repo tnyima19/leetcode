@@ -3,45 +3,43 @@
 using namespace std;
 
 
+void swap(int& a, int& b){
+    int temp = a;
+    a = b;
+    b = temp;
+
+}
+
   vector<int> merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
        // merged
-      vector<int> final_arr;  
+      //vector<int> final_arr;  
+      int check_swap = 0;
         
-       
-        if(n > m){
-        for(int j = 0; j<n{
-        for(int i=0;i<n; ++i){
-         if(nums1[i]> nums2[i]){
-            final_arr.push_back(nums2[i]);
-         }else if (nums1[i] == nums2[i]){
-            final_arr.push_back(nums1[i]);
-            final_arr.push_back(nums1[i]);
-         }else {
-            final_arr.push_back(nums1[i]);
-         }
+       // forced method 
+       for(int i=m; i<n+m; ++i){
+            //cout<<nums1[i]<<endl;
+            nums1.pop_back();
+       }
+
+       for(int i=0; i<n; i++){
+            nums1.push_back(nums2[i]);
+       }
+
+       // now sorting using bubbleSort
+
+       for(int i=0; i<nums1.size()-1;++i){
+        for(int j=0; j<nums1.size()-1-i; ++j){
+            if(nums1[j] > nums1[j+1]){
+                swap(nums1[j], nums1[j+1]);
+                check_swap = 1;
+            }
         }
-        }
-        }else {
-            for(int i=0;i<m; ++i){
-         if(nums1[i]> nums2[i]){
-            final_arr.push_back(nums2[i]);
-         }else if (nums1[i] == nums2[i]){
-            final_arr.push_back(nums1[i]);
-            final_arr.push_back(nums1[i]);
-         }else {
-            final_arr.push_back(nums1[i]);
-         }
-        }
-
-
-
-        }
-
-    nums1 = final_arr;
-
-    return nums1;
+            if(check_swap == 0){
+                break;
+            }
+       }
         
-      
+      return nums1;
         
     }
 
