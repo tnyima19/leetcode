@@ -7,26 +7,25 @@ using namespace std;
        // merged
       vector<int> final_arr;  
         
-        for(int i=0; i<n; ++i){
-            nums1.pop_back();
-            //nums1.push_back(nums2[i]);
-        }
+       
         if(n > m){
+        for(int j = 0; j<n{
         for(int i=0;i<n; ++i){
          if(nums1[i]> nums2[i]){
             final_arr.push_back(nums2[i]);
-         }else if (nums1[i] == nums2[i]{
+         }else if (nums1[i] == nums2[i]){
             final_arr.push_back(nums1[i]);
             final_arr.push_back(nums1[i]);
          }else {
             final_arr.push_back(nums1[i]);
          }
         }
+        }
         }else {
-            for(int i=0;i<n; ++i){
+            for(int i=0;i<m; ++i){
          if(nums1[i]> nums2[i]){
             final_arr.push_back(nums2[i]);
-         }else if (nums1[i] == nums2[i]{
+         }else if (nums1[i] == nums2[i]){
             final_arr.push_back(nums1[i]);
             final_arr.push_back(nums1[i]);
          }else {
@@ -69,4 +68,5 @@ using namespace std;
         for(int i=0;i<final.size(); ++i){
             cout<<final[i]<<endl;
         }
+        return 0;
     }
