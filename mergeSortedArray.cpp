@@ -10,6 +10,7 @@ void swap(int& a, int& b){
 
 }
 
+
   vector<int> merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
        // merged
       //vector<int> final_arr;  
@@ -68,3 +69,61 @@ void swap(int& a, int& b){
         }
         return 0;
     }
+
+    /*
+operations that arrays support 
+Array is a data structure which means taht it stores data in a specific formate
+and supports certain operations on the data it stores. 
+
+In this section , we'll be looking at three basic operations that are supported by almost every data 
+structre; insertion, deletion and search. 
+
+Insertion. 
+    1. insert new element at the end of the array . 
+    2. Inserting a new element at the beginning of the array . 
+    3. Iinserting a new element at any given index. 
+
+
+    2. insert at the start of an array 
+        we need to shift all other elements in the array to the right by one index to create space
+        for the new element. This is very costly operation, since each of hte existing elements has to 
+        be shifted one step to the right . This is not constant time operation. 
+        O(n): lineart time complexity, where n is the leght of an array . 
+            for(int i=arr.size()-2; i>= 0;--i){
+                arr[i+1]= arr[i];
+                if(i ==0){
+                    arr[i] = new_ele;
+                }
+            }
+
+    3.Inserting anywhere in the array . 
+    Similarly for inserting at any given index, we first need to shift all the elements from taht
+    index onwards one positoin to the right. Once the space is created for the new element, we proceed
+    with the insertion. If you think about it, insertion at the beginning is basically a special case 
+    of inserting an element at a given index- in that case, the given index was zero. 
+    
+
+    insert num;
+    insert at position n;
+    for(int i=arr.size()-2;i>=n; --i){
+        arr[i+1]= arr[i];
+
+    }
+    arr[n] = num;
+
+
+Array Deletions, 
+    1. Delete last elements, create arr with one less arr size and add all elment except last
+    2. delete first elements 
+    3. delete at any given element, 
+        int new_arr[4];
+        int arr[5];
+        int curr = 0;
+        for(int i=0; i<arr.size(); ++i){
+            if(i != target){
+                new_arr[curr] = arr[i]
+                curr++;
+            }
+        }
+
+*/
