@@ -11,7 +11,7 @@ void selectionSort(vector<int>& arr){
         for(int j=i;j<arr.size();++j){
             //k=j;// min index
             if(arr[i]> arr[j]){
-                k = j;
+                k = j;// j is the location of arr less than arr[i]
             }
         }
         // swap min and i
@@ -37,3 +37,20 @@ int main(){
     }
 
 }
+
+/*
+is it stable or adptive?
+
+it is not adaptive because, we cannot know if its s
+whether it is sorted or not we cannot idnetify until O(n2)
+
+
+
+Stable. 
+stability is defined by the order of duplicate numbers, the second identical number, 
+may come before the first identical number, 
+hence it is not stable. 
+
+
+
+*/
