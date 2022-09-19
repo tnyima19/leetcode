@@ -11,7 +11,7 @@ void shift(vector<int>& nums, int index){
 
 void moveZeros(vector<int>& nums){
 
-    int j = nums.size()-1// the last element
+    int j = nums.size()-1;// the last element
     for(int i=0; i<nums.size();++i){
         while(nums[i]== 0 && i<j){ // while because there may be consecutive zeros.
             shift(nums, i);
