@@ -6,19 +6,16 @@ using namespace std;
 
 vector<int> removeDuplicates(vector<int>& nums) {
 
-    vector<int> final;
-    for(int i=0; i<nums.size(); ++i){
-        bool duplicate = false;
-        for(int j = i+1; j< nums.size();++j){
-            if(nums[i] == nums[j]){
-                // found duplicate
-                duplicate = true;
-            }
-        }
-        if( duplicate == false){
-            final.push_back(nums[i]);
-        }
+  // count unique element
+  int count = 0; // count unique elements.
+  vector<int> final; 
+
+  for(int i=0;i<nums.size();++i){
+    if(i == 0 || nums[i] != nums[i-1]){ // nums[0] is always a unique element
+        count++;
+        final.push_back(nums[i]);
     }
+  }
 
     return final;
 }
@@ -72,5 +69,15 @@ Remember how that must be decieed when the array is created? The best solution f
 probem is to do an initial pass, couting thenumebr of unique lements. Then , we 
 can create teh result array and do a second pass to add the lement
 into it. Here's teh code for this approach. 
+
+>do initial pass, counting the number of unique elements. 
+> then create teh result array and do a second pass to add the elements into it. 
+
+
+did you notice the fatal flaw with this approach thou? It is the wrong return type 
+we could copy the result array back intot eh intpu array... and then return 
+the length.. but his is not what hte question wants us to do. We want to instead do 
+the deletions with a space complexity of O(1) and a time complexity of O(N).
+
 
 */
