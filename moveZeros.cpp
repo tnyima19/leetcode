@@ -28,3 +28,22 @@ int main(){
 
     return 0;
 }
+
+
+/*
+BETTER repeated deletion Algorithm -Answer
+
+Anyway , teh algorithm with O(N) space is 
+surprisingly similar to the one without. 
+Interestingly, its simpler though, because it doesnt' need to firstly
+determine the size of the output. 
+
+The original array was modified in-place. And all the unique 
+elements got shifted to teh front. The unwanted duplcates 
+still exisst in teh array. Hence we need to return the lenght 
+
+
+Two-pointer technique. 
+1. Read all the elements like we did before, to identify.
+
+*/
