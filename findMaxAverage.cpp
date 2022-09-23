@@ -20,8 +20,8 @@ double findMaxAverage(vector<int> nums, int k){
                 
             }
             if(max< total){
-                    max = total;
-                }
+                max = total;
+            }
         }
         }
          max_avg = max / k;
