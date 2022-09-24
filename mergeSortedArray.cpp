@@ -10,7 +10,6 @@ void swap(int& a, int& b){
 
 }
 
-
   vector<int> merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
        // merged
       //vector<int> final_arr;  
@@ -46,18 +45,18 @@ void swap(int& a, int& b){
 
     int main(){
         vector<int> num1; 
-        num1.push_back(4);
-        num1.push_back(5);
-        num1.push_back(6);
+        num1.push_back(1);
+        num1.push_back(2);
+        num1.push_back(3);
         num1.push_back(0);
         num1.push_back(0);
         num1.push_back(0);
 
 
         vector<int> num2;
-        num2.push_back(1);
         num2.push_back(2);
-        num2.push_back(3);
+        num2.push_back(5);
+        num2.push_back(6);
 
         int m = 3;
         int n = 3;

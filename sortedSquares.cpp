@@ -29,6 +29,17 @@ vector<int> sortedSquares(vector<int>& nums){
 }
 
 int main(){
+vector<int> arr;
+arr.push_back(-4);
+arr.push_back(-1);
+arr.push_back(0);
+arr.push_back(3);
+arr.push_back(10);
+
+sortedSquares(arr);
+for(int i =0;i<arr.size();++i){
+    cout<<arr[i]<<endl;
+}
 
     return 0;
 }

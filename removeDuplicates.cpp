@@ -16,17 +16,42 @@ vector<int> removeDuplicates(vector<int>& nums) {
         final.push_back(nums[i]);
     }
   }
-
+  //cout<<count<<endl;
     return final;
 }
+int removeDuplicates2(vector<int>& nums) {
+         int count = 0;
+        int curr = nums[0];
+        vector<int> final;
+        for(int i=0;i<nums.size();++i){
+            if(curr == nums[i]){
+                count++;
+            }
+            if(curr != nums[i] ||  i ==0){
+                final.push_back(nums[i]);
+                count = 0;
+            }
+            
+        }
+        nums = final;
+        return count;
+        
+    }
 
 
 int main(){
 
     vector<int> arr;
+    arr.push_back(0);
+    arr.push_back(0);
+    arr.push_back(1);
     arr.push_back(1);
     arr.push_back(1);
     arr.push_back(2);
+    arr.push_back(2);
+    arr.push_back(3);
+    arr.push_back(3);
+    arr.push_back(4);
     arr = removeDuplicates(arr);
 
     for(int i= 0; i<arr.size(); ++i){
