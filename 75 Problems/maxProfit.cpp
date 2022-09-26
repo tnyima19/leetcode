@@ -9,10 +9,10 @@ int maxProfit(vector<int>& prices){
     int j = i+1;
 
     while(j<prices.size()){
-        if(prices[i]> price[j]){// incase of loss
+        if(prices[i]> prices[j]){// incase of loss
             i++;
         }else{
-            profit = prices[j] -price[i];
+            profit = prices[j] -prices[i];
             if(max_profit< profit){
                 max_profit = profit;
             }
