@@ -36,6 +36,31 @@ double findMaxAverage(vector<int> nums, int k){
         
         
 }
+/*
+problem 643
+maximum average Subarray I 
+variable called max
+set the max to the first. 
+if something is bigger than max 
+
+hint is that standard sliding window. 
+what is the diff between red and blue window, 
+two box method, 
+    total = nums[0]+num[1]+ num[2] + num[3];
+
+    for(int i=0;i<k;++i){
+        total += nums[i];
+    }
+
+    for(int i=0;i<nums.size()-k;++i){
+        total = total + num[k+i] - nums[i-1];
+    }
+
+    how many traversals of the lists are made up?
+    how many traversals would it take?
+        only once, 
+
+*/
 
 int main(){
     vector<int> arr;
